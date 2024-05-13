@@ -5,11 +5,9 @@ from skimage.transform import rescale
 # Path to the data
 path_to_data = "Data/Train + Test/"
 path_to_save_normalised_data = "Data/normalised/"
-path_to_save_min_max_of_labels = "Data/normalised/min_max_labels/"   # Save the min and max values of the labels so that we can denormalize them later
 
 pathlib.Path(path_to_data).mkdir(parents=True, exist_ok=True) 
 pathlib.Path(path_to_save_normalised_data).mkdir(parents=True, exist_ok=True)
-pathlib.Path(path_to_save_min_max_of_labels).mkdir(parents=True, exist_ok=True)
 
 
 #load the data
