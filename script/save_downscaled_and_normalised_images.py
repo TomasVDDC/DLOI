@@ -21,8 +21,8 @@ X_M_val = np.load(path_to_data + "X_M_val.npy", allow_pickle=True, mmap_mode="r"
 
 num_samples = 3000
 # Normalize the data
-X_BC_train_normalised = X_BC_train[:num_samples].astype(np.float16) / 255.0 
-X_M_train_normalised = X_M_train[:num_samples].astype(np.float16) / 255.0
+X_BC_train_normalised = X_BC_train[-num_samples:].astype(np.float16) / 255.0 #take last samples because the start of the data is of low quality, lots of missing values
+X_M_train_normalised = X_M_train[-num_samples:].astype(np.float16) / 255.0
 X_BC_test_normalised = X_BC_test[:500].astype(np.float16) / 255.0
 X_M_test_normalised = X_M_test[:500].astype(np.float16) / 255.0
 X_BC_val_normalised = X_BC_val[:500].astype(np.float16) / 255.0
